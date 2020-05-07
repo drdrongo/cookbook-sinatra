@@ -8,5 +8,17 @@ configure :development do
 end
 
 get '/' do
-  'Hi Erica!'
+  binding.pry
+  erb :index
+end
+
+get '/about' do
+  binding.pry
+  erb :about
+end
+
+get '/team/:username' do
+  binding.pry
+  puts params[:username]
+  "The username is #{params[:username]}"
 end
